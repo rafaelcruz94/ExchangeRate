@@ -180,6 +180,7 @@ footer{
 @media only screen and (min-width: 1080px) {
     .container{
         width: 50%;
+        top: 70%;
     }
     input{
         font-size: 2rem;
@@ -194,15 +195,15 @@ footer{
         width: 500px;
     }
     .rate{
-        top: 45%;
+        top: 40%;
         font-size: 2.5rem;
     }
     h1{
-        bottom: 10%;
+        bottom: 0%;
         font-size: 4em;
     }
     h2{
-        top: 35%;
+        top: 30%;
         font-size: 1.7em;
     }
     footer{
@@ -213,7 +214,7 @@ footer{
         font-size: 7em;
     }
     .bigContainer{
-        height: 70%;
+        height: 80%;
     }
 }
 

@@ -96,10 +96,6 @@ select {
   font-size: 1rem;
 }
 
-option{
-  height: 5px;
-}
-
 button {
   background: #11998e;
   /* fallback for old browsers */
