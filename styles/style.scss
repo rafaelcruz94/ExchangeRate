@@ -21,6 +21,10 @@ $secondaryColor : whitesmoke;
     font-family: 'Open Sans', sans-serif;
 }
 
+html, body{
+    height: 100%;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -36,7 +40,7 @@ body{
     background-color: #20B2B2;
     width: 100vw;
     min-width: 280px;
-    min-height: 500px;
+    min-height: 350px;
 }
 
 .fa-coins{
