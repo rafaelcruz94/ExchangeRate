@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$primaryColor : lightgray;
+$secondaryColor : whitesmoke;
+
+@mixin positionAbs() {
+    margin: 0;
+    position: absolute;
+}
+
+@mixin moveEl(){
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body{
+    height: 100vh;
+    background-color: #20B2B2;
+    width: 100vw;
+    min-width: 280px;
+    min-height: 500px;
+}
+
+.fa-coins{
+    @include positionAbs();
+    z-index: 9999;
+    top: 15%;
+    @include moveEl();
+    font-size: 5em;
+    color: $primaryColor;
+}
+
+.bigContainer{
+    @include positionAbs();
+    background-color: $secondaryColor;
+    width: 100%;
+    height: 65%;
+    top: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    min-width: 280px;
+}
+
+.container{
+    @include positionAbs();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 75%;
+    @include moveEl();
+    border: solid 1px $primaryColor;
+    padding: 1em;
+    border-radius: 2em;
+    font-size: 1rem;
+    width: 90%;
+    min-width: 240px;
+    min-height: 150px;
+}
+
+input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+select{
+    background-color: transparent;
+    outline: none;
+    border: none; 
+    color: #6D6C8B;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button{
+    background: #11998e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #11998e, #38ef7d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #11998e, #38ef7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    color: $secondaryColor;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1rem;
+    &:hover{
+        filter: brightness(90%);  
+    }
+    &:active{
+        transform: scale(1.1);  
+    }
+}
+
+hr{
+    @include positionAbs();
+    border: solid 0.1px $primaryColor;
+    background-color: $primaryColor;
+    width: 215px;
+    text-align: center;
+    z-index: -1;
+    top: 50%;
+    @include moveEl();
+}
+
+.rate{
+    @include positionAbs();
+    top: 50%;
+    @include moveEl();
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #212056;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    @include positionAbs();
+    bottom: 15%;
+    @include moveEl();
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-align: center;
+    color: $secondaryColor;
+    width: 100%;
+}
+
+h2{
+    @include positionAbs();
+    text-transform: uppercase;
+    color: #6D6C8B;
+    top: 43%;
+    @include moveEl();
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+footer{
+    @include positionAbs();
+    bottom: 2%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    color: $secondaryColor;
+    font-size: 0.8rem;
+    min-width: 280px;
+}
+
+@media only screen and (max-width: 280px) {
+    input{
+        width: 100px;
+    }
+    hr{
+        width: 170px;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .container{
+        width: 50%;
+    }
+    input{
+        font-size: 2rem;
+    }
+    select{
+        font-size: 2rem;
+    }
+    button{
+        font-size: 2rem;
+    }
+    hr{
+        width: 500px;
+    }
+    .rate{
+        top: 45%;
+        font-size: 2.5rem;
+    }
+    h1{
+        bottom: 10%;
+        font-size: 4em;
+    }
+    h2{
+        top: 35%;
+        font-size: 1.7em;
+    }
+    footer{
+        font-size: 1rem;
+    }
+    .fa-coins{
+        top: 10%;
+        font-size: 7em;
+    }
+    .bigContainer{
+        height: 70%;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1080px) {
+    .container{
+        width: 70%;
+    }
+    input{
+        font-size: 1.8rem;
+    }
+    select{
+        font-size: 1.8rem;
+    }
+    button{
+        font-size: 2rem;
+    }
+    hr{
+        width: 500px;
+    }
+    .rate{
+        top: 45%;
+        font-size: 2.5rem;
+    }
+    h1{
+        bottom: 10%;
+        font-size: 4em;
+    }
+    h2{
+        top: 35%;
+        font-size: 1.7em;
+    }
+    footer{
+        font-size: 1rem;
+    }
+    .fa-coins{
+        top: 10%;
+        font-size: 8em;
+    }
+}
