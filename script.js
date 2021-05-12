@@ -31,6 +31,7 @@ document.getElementById('exchange').addEventListener('click', () => {
     toCurEl.value = savedValue;
 	convert();
 });
+window.addEventListener("load", function() { window. scrollTo(0, 0); });
 
 //Load
 convert();
